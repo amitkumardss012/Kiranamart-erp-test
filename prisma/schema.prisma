@@ -266,8 +266,8 @@ model CustomerPurchase {
   taxAmount      Float?
   discountAmount Float?
 
-  customerId Int
-  customer   Customer @relation(fields: [customerId], references: [id])
+  customerId Int?
+  customer   Customer? @relation(fields: [customerId], references: [id])
 
   customerPurchaseItem CustomerPurchaseItem[]
 
